@@ -38,7 +38,7 @@ def fetch_snowflake_data():
         schema=creds["schema"]
     )
     
-    query = "SELECT * FROM GLG_ICON_NEGOTIATIONS.EXPORT.TBL_GLS_CREATED_SETTLEMENTS_SUMMARY WHERE CREATED_BY_NAME IS NOT NULL ORDER BY CAL_DATE"  # Replace with actual table
+    query = "SELECT * FROM GLG_ICON_NEGOTIATIONS.EXPORT.TBL_GLS_CREATED_SETTLEMENTS_SUMMARY WHERE CREATED_BY_NAME IS NOT NULL ORDER BY CAL_DATE"  
     df = pd.read_sql(query, conn)
     conn.close()
     
